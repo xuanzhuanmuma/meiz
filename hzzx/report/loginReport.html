@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-07-31 12:24:11</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:42.873616</p>
-<p class='attribute'><strong>Status:</strong> Pass 1 Failure 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-08-03 11:00:10</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:33.749907</p>
+<p class='attribute'><strong>Status:</strong> Failure 3 Error 3</p>
 
 <p class='description'>执行人：妍娜</p>
 </div>
@@ -221,22 +221,45 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
+<tr class='errorClass'>
     <td>LoginTest</td>
-    <td>3</td>
-    <td>1</td>
-    <td>2</td>
+    <td>6</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',3)">Detail</a></td>
+    <td>3</td>
+    <td>3</td>
+    <td><a href="javascript:showClassDetail('c1',6)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login_1___admin___1___ok__</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_login_1__1___ok__</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: Traceback (most recent call last):
+  File "D:\soft\MyInformation\ProjectCodes\Python\meiz\venv\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+TypeError: test_login() missing 1 required positional argument: 'result'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='ft1.2' class='none'>
-    <td class='failCase'><div class='testcase'>test_login_2___admin___2___error__</div></td>
+    <td class='failCase'><div class='testcase'>test_login_1__1___ok__</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -251,7 +274,7 @@ function showOutput(id, name) {
         <pre>
         
 ft1.2: Traceback (most recent call last):
-  File "D:/soft/MyInformation/ProjectCodes/Python/meiz/hzzx/case/unittest_login.py", line 33, in tearDown
+  File "D:/soft/MyInformation/ProjectCodes/Python/meiz/hzzx/case/unittest_login.py", line 26, in tearDown
     self.assertTrue(result)
 AssertionError: False is not true
 
@@ -264,12 +287,12 @@ AssertionError: False is not true
 </tr>
 
 <tr id='ft1.3' class='none'>
-    <td class='failCase'><div class='testcase'>test_login_3___admin___3___error__</div></td>
+    <td class='errorCase'><div class='testcase'>test_login_2__2___error__</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
-        fail</a>
+        error</a>
 
     <div id='div_ft1.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
@@ -279,7 +302,91 @@ AssertionError: False is not true
         <pre>
         
 ft1.3: Traceback (most recent call last):
-  File "D:/soft/MyInformation/ProjectCodes/Python/meiz/hzzx/case/unittest_login.py", line 33, in tearDown
+  File "D:\soft\MyInformation\ProjectCodes\Python\meiz\venv\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+TypeError: test_login() missing 1 required positional argument: 'result'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_2__2___error__</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+        fail</a>
+
+    <div id='div_ft1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.4: Traceback (most recent call last):
+  File "D:/soft/MyInformation/ProjectCodes/Python/meiz/hzzx/case/unittest_login.py", line 26, in tearDown
+    self.assertTrue(result)
+AssertionError: False is not true
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_login_3__3___error__</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
+        error</a>
+
+    <div id='div_ft1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.5: Traceback (most recent call last):
+  File "D:\soft\MyInformation\ProjectCodes\Python\meiz\venv\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+TypeError: test_login() missing 1 required positional argument: 'result'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_3__3___error__</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6')" >
+        fail</a>
+
+    <div id='div_ft1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.6: Traceback (most recent call last):
+  File "D:/soft/MyInformation/ProjectCodes/Python/meiz/hzzx/case/unittest_login.py", line 26, in tearDown
     self.assertTrue(result)
 AssertionError: False is not true
 
@@ -293,10 +400,10 @@ AssertionError: False is not true
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>3</td>
-    <td>1</td>
-    <td>2</td>
+    <td>6</td>
     <td>0</td>
+    <td>3</td>
+    <td>3</td>
     <td>&nbsp;</td>
 </tr>
 </table>

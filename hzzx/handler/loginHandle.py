@@ -1,11 +1,9 @@
 from hzzx.page.loginPage import LoginPage
-import os
 
 
 class LoginHandle(object):
     def __init__(self, driver):
-        file_path = os.path.dirname(os.getcwd()) + r'\config\elements.ini'
-        self.login_p = LoginPage(file_path, driver)
+        self.login_p = LoginPage(driver)
 
     def send_user_name(self, username):
         self.login_p.get_username_element().send_keys(username)

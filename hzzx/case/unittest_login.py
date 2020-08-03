@@ -14,7 +14,7 @@ data = excel.get_all_data()
 class LoginTest(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
-        self.driver.get('http://agilebpm.nmgxzy.com/#/login')
+        self.driver.get('http://192.168.1.13:9001/login')
         self.driver.maximize_window()
         time.sleep(2)
         self.login = LoginBusiness(self.driver)

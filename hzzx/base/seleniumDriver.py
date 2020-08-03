@@ -1,16 +1,9 @@
-from selenium.webdriver.common.action_chains import ActionChains
+import time
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from hzzx.base.findElement import FindElement
-import time
-import os
-from selenium.webdriver.support.select import Select
-from hzzx.util.iniUtil import OperateIni
-from selenium.webdriver.common.keys import Keys
-from handle_json import handle_json
 
 
-# https://www.cnblogs.com/zsjlovewm/p/11305547.html
 class SeleniumDriver(object):
     def __init__(self):
         self.driver = self.open_browser()

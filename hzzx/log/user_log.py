@@ -15,7 +15,7 @@ class UserLog(object):
         self.file_handler = logging.FileHandler(log_path, 'a', encoding='utf-8')
         self.file_handler.setLevel(logging.INFO)
         formatter = logging.Formatter(
-            '%(asctime)s %(filename)s ----> %(funcName)s %(levelno)s :             %(levelname)s ----> %(message)s')
+            '%(asctime)s %(filename)s ----> %(funcName)s %(levelno)s :  %(levelname)s ----> %(message)s')
         self.file_handler.setFormatter(formatter)
         self.logger.addHandler(self.file_handler)
 

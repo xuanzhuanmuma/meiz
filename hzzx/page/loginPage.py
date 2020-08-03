@@ -1,8 +1,10 @@
 from hzzx.base.findElement import FindElement
+import os
 
 
 class LoginPage(object):
-    def __init__(self, file_path, driver):
+    def __init__(self, driver):
+        file_path = os.path.dirname(os.getcwd()) + r'\config\elements.ini'
         self.current_element = FindElement(file_path, driver)
 
     def get_username_element(self):
