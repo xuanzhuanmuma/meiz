@@ -2,7 +2,7 @@ from hzzx.base.findElement import FindElement
 import os
 
 class ChangePasswordPager(object):
-    def __init__(self, file_path, driver):
+    def __init__(self, driver):
         file_path = os.path.dirname(os.getcwd()) + r'\config\elements.ini'
         self.current_element = FindElement(file_path, driver)
 
@@ -17,3 +17,6 @@ class ChangePasswordPager(object):
 
     def get_save_btn(self):
         return self.current_element.get_element('ChangePassword', 'change_password_btn')
+
+    def get_tip_element(self):
+        return self.current_element.get_element('ChangePassword', 'change_password_tip')

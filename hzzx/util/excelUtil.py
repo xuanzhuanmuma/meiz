@@ -47,7 +47,7 @@ class ExcelUtil:
         if self.get_row_num() is not None and self.get_col_num() is not None:
             for i in range(1, self.table.nrows):
                 row_contet = []
-                for j in range(1, self.table.ncols):
+                for j in range(self.table.ncols):
                     # 表格数据类型
                     ctype = self.table.cell(i, j).ctype
                     cell = self.table.cell_value(i, j)

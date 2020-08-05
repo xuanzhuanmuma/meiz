@@ -10,3 +10,6 @@ class ChangePasswordBussiness(object):
         self.changee_password_handle.send_new_password(new_password)
         self.changee_password_handle.send_confirm_password(confirm_password)
         self.changee_password_handle.click_save_btn()
+
+    def get_tip_message(self):
+        return self.changee_password_handle.get_tip_txt()

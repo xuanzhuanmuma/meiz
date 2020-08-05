@@ -1,11 +1,15 @@
-from hzzx.business.loginBusiness import LoginBusiness
-from selenium import webdriver
-import time
-import unittest
 import HTMLTestRunner
 import os
+import time
+import unittest
+
 import ddt
+from selenium import webdriver
+
+from hzzx.business.loginBusiness import LoginBusiness
 from hzzx.util.excelUtil import ExcelUtil
+from hzzx.util.iniUtil import OperateIni
+
 excel = ExcelUtil(os.path.dirname(os.getcwd()) + r'\config\caseData.xls')
 excel.get_table_by_index(0)
 data = excel.get_all_data()
@@ -13,8 +17,9 @@ data = excel.get_all_data()
 @ddt.ddt
 class LoginTest(unittest.TestCase):
     def setUp(self):
+        url = OperateIni(os.path.dirname(os.getcwd()) + '\config\myConfig.ini').get_value('user_url', 'login_url')
         self.driver = webdriver.Chrome()
-        self.driver.get('http://192.168.1.13:9001/login')
+        self.driver.get(url)
         self.driver.maximize_window()
         time.sleep(2)
         self.login = LoginBusiness(self.driver)
@@ -28,7 +33,7 @@ class LoginTest(unittest.TestCase):
 
     @ddt.data(*data)
     @ddt.unpack
-    def test_login(self, username, password, result):
+    def test_login(self, username, password, expect):
         self.login.login_success(username, password)
 
 

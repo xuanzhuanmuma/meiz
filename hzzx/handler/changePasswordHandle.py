@@ -18,3 +18,8 @@ class ChangePasswordHandle(object):
     def click_save_btn(self):
         self.change_password_p.get_save_btn().click()
 
+    def get_tip_txt(self):
+        return self.change_password_p.get_tip_element().text
+
+
+
